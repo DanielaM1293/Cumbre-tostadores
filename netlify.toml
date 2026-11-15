@@ -1,0 +1,13 @@
+# Configuración de Netlify para el frontend (la API se despliega aparte, por ejemplo en Render).
+[build]
+  command = "npm run build"
+  publish = "client/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# La tienda usa React Router: cualquier ruta (/producto/3, /checkout, /admin...) debe cargar index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
