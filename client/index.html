@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Café de especialidad de fincas colombianas, tostado en lotes pequeños. Pide por WhatsApp o paga en línea." />
+    <meta name="theme-color" content="#EDF0EA" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Cumbre Tostadores | Café de especialidad colombiano</title>
+    <script>
+      // Aplica el tema antes de pintar para evitar el parpadeo claro/oscuro.
+      try {
+        var t = localStorage.getItem('cumbre.theme');
+        var dark = t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        if (dark) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

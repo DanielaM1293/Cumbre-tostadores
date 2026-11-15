@@ -1,0 +1,21 @@
+{
+  "name": "cumbre-tienda",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tienda de café de especialidad con carrito, checkout por WhatsApp o pasarela y panel de administración.",
+  "scripts": {
+    "setup": "npm install",
+    "dev": "concurrently -k -n api,web -c yellow,cyan \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "seed": "npm --prefix server run seed",
+    "test": "npm --prefix server test",
+    "postinstall": "npm --prefix server install && npm --prefix client install"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
